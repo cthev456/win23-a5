@@ -12,12 +12,12 @@ all: $(EXECUTABLE)
 
 # Rule to compile the object files
 %.o: %.c $(HEADER)
-    $(CC) -c $< -o $@
+	$(CC) -c $< -o $@
 
 # Rule to link the object files into the executable
 $(EXECUTABLE): $(OBJECTS)
-    $(CC) $(OBJECTS) -o $@
+	$(CC) $(OBJECTS) -o $@
 
 # Clean target to remove object files and executable
 clean:
-    rm -f $(OBJECTS) $(EXECUTABLE)
+	rm -f $(OBJECTS) $(EXECUTABLE)
